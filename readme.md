@@ -1,6 +1,18 @@
-# IOBench
+# OIBench
 
-This repository contains the evaluation environment for our research paper. The scoring system is implemented in `scorer.py` and can be used to evaluate model performance.
+[OIBench](https://arxiv.org/abs/2506.10481). is a high-quality, private, and challenging olympiad-level informatics benchmark consisting of 250 carefully curated original problems. 
+
+This repository contains the evaluation environment for [our OIBench paper](https://arxiv.org/abs/2506.10481). You can access data on [HuggingFace](https://huggingface.co/datasets/AGI-Eval/OIBench).
+
+
+The scoring system is implemented in `scorer.py` and can be used to evaluate model performance. 
+
+## Leaderboard
+
+![](Fig/leaderboard.png)
+
+* We will continue to update the evaluation results of new models and host them on the [AGI-Eval community](https://agi-eval.cn/evaluation/detail?id=60).
+
 
 ## Prerequisites
 
@@ -77,7 +89,7 @@ The evaluation results will be:
 - Saved to `cases.json` for detailed case-by-case results
 
 
-Please note that the provided `scorer.py` uses the problem's `canonical_solution` as a demonstration. In actual execution, please replace it with your model's response (raw code). We provide a function extractor in the `code_utils` file for your convenience. In the code comments, we have included an example method for obtaining the model's `solution` using the OpenAI API.
+Please note that the provided `scorer.py` uses the C++ language and problem's `canonical_solution` as a demonstration. In actual execution, please replace it with your model's response (raw code). We provide a function extractor in the `code_utils` file for your convenience. In the code comments, we have included an example method for obtaining the model's `solution` using the OpenAI API.
 
 
 ### Citation
@@ -98,4 +110,3 @@ Please note that the provided `scorer.py` uses the problem's `canonical_solution
 
 ### Acknowledgement
 Our scorer logic is adapted from the implementation of *OctoPack: Instruction Tuning Code Large Language Models.*
-
